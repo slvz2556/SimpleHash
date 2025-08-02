@@ -27,9 +27,52 @@ Internally, SimpleHash uses a custom hashing algorithm based on character codes 
 var hasher = new SimpleHash.SimpleHash();
 string hash = hasher.Hash("password123");
 
-### Hash with radneom salt
+---
+
+### Hash with radnom salt
 
 ```csharp
 var hasher = new SimpleHash.SimpleHash();
 string salt;
 string hash = hasher.Hash("password123", out salt);
+
+---
+
+### Hash with custom salt
+
+```csharp
+string salt = "yourCustomSalt==";
+string hash = hasher.Hash("password123", salt);
+
+---
+
+### Verify a hash without salt
+
+```csharp
+bool isValid = hasher.Verify("password123", hash);
+
+---
+
+### Verify a hash with salt
+
+```csharp
+bool isValid = hasher.Verify("password123", hash, salt);
+
+---
+
+### Salt Generation
+
+```csharp
+string salt = hasher.CreateRandomSalt(); // Default is 32 bytes, max 64
+
+---
+
+
+## Links
+
+- [Website](https://slvz.dev)
+
+
+
+
+
