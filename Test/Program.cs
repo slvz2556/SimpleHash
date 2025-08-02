@@ -1,9 +1,11 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using SimpleHash;
+
 Console.Write("Write some thing: ");
 string input = Console.ReadLine();
 
-SimpleHash.SimpleHash myHash = new SimpleHash.SimpleHash();
+var myHash = new Hashing();
 
 
 Console.WriteLine("\n\n//////////////////////// Hash without salt ////////////////////////////");

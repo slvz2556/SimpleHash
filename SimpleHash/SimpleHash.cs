@@ -3,7 +3,7 @@ using System.Text;
 
 namespace SimpleHash;
 
-public class SimpleHash
+public class Hashing
 {
     //Hash without salt
     public string Hash(string input)
