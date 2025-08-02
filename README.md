@@ -24,7 +24,7 @@ Internally, SimpleHash uses a custom hashing algorithm based on character codes 
 ### Hash without salt
 
 ```csharp
-var hasher = new SimpleHash.SimpleHash();
+var hasher = new Hashing();
 string hash = hasher.Hash("password123");
 ```
 ---
@@ -32,7 +32,6 @@ string hash = hasher.Hash("password123");
 ### Hash with radnom salt
 
 ```csharp
-var hasher = new SimpleHash.SimpleHash();
 string salt;
 string hash = hasher.Hash("password123", out salt);
 ```
@@ -43,7 +42,7 @@ string hash = hasher.Hash("password123", out salt);
 ```csharp
 string salt = "yourCustomSalt==";
 string hash = hasher.Hash("password123", salt);
-```markdown
+```
 ---
 
 ### Verify a hash without salt
